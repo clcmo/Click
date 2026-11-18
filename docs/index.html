@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Click: marque onde você esteve</title>
+    <meta
+      name="description"
+      content="Click é um app Android de check-in: pega sua localização, abre a câmera e deixa um marcador no mapa a cada foto."
+    />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="#"><img src="assets/icon.png" alt="" />Click</a>
+        <a href="https://github.com/clcmo/Click">Código no GitHub</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <div>
+          <h1>Marque onde você esteve.</h1>
+          <p class="lead">
+            O Click mostra o mapa, encontra sua localização e deixa um marcador
+            a cada foto que você tira.
+          </p>
+          <div class="cta">
+            <a class="btn" href="https://github.com/clcmo/Click/releases/latest"
+              >Baixar o APK</a
+            >
+            <a href="https://github.com/clcmo/Click">Ver no GitHub</a>
+            <a href="#como">Como funciona</a>
+          </div>
+        </div>
+        <figure>
+          <svg
+            viewBox="0 0 400 360"
+            role="img"
+            aria-label="Mapa dobrado, como o ícone do app"
+          >
+            <polygon points="20,70 110,40 110,300 20,330" fill="#3e6aa5" />
+            <polygon points="110,40 200,70 200,330 110,300" fill="#5c86bd" />
+            <polygon points="200,70 290,40 290,300 200,330" fill="#2f5388" />
+            <polygon points="290,40 380,70 380,330 290,300" fill="#a9c2e3" />
+            <g id="pins"></g>
+          </svg>
+          <button id="checkin" type="button">Checkin</button>
+          <p class="hint" id="hint">
+            Toque em Checkin para soltar um marcador no mapa.
+          </p>
+          <ul class="log" id="log" aria-live="polite"></ul>
+        </figure>
+      </div>
+
+      <section id="como">
+        <div class="wrap">
+          <h2>Como funciona</h2>
+          <ol>
+            <li>
+              <h3>Abra o mapa</h3>
+              <p>
+                O Click pede acesso à localização e acompanha onde você está.
+              </p>
+            </li>
+            <li>
+              <h3>Toque em Checkin</h3>
+              <p>
+                Sem sinal de GPS, o app avisa e usa a Av. Paulista como ponto de
+                partida.
+              </p>
+            </li>
+            <li>
+              <h3>Tire a foto</h3>
+              <p>
+                Ao confirmar a foto, um marcador com o horário aparece no mapa.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Por dentro</h2>
+          <dl>
+            <dt>Linguagem</dt>
+            <dd>Kotlin</dd>
+            <dt>Arquitetura</dt>
+            <dd>MVVM: Activity, ViewModel e repositório de localização</dd>
+            <dt>Mapa</dt>
+            <dd>Google Maps SDK para Android</dd>
+            <dt>Localização</dt>
+            <dd>Fused Location Provider</dd>
+            <dt>Android</dt>
+            <dd>5.0 (API 21) ou mais novo</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        Feito por <a href="https://camilaloliveira.com">Camila L. Oliveira</a>.
+        O código está em
+        <a href="https://github.com/clcmo/Click">github.com/clcmo/Click</a>, com
+        a licença do repositório.
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
